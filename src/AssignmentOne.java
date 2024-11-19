@@ -56,3 +56,5 @@ class Neurology extends HealthProfessional {
         System.out.println("Specialty: " + this.specialty);
     }
 }
+
+// "Part4:预约类Appointment";
