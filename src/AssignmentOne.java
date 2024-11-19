@@ -58,3 +58,29 @@ class Neurology extends HealthProfessional {
 }
 
 // "Part4:预约类Appointment";
+class Appointment {
+
+    String name;
+    String phone;
+    String time;
+    HealthProfessional doctor;
+
+    public Appointment() {
+
+    }
+
+    public Appointment(String name, String phone, String time, HealthProfessional doctor) {
+        this.name = name;
+        this.phone = phone;
+        this.time = time;
+        this.doctor = doctor;
+    }
+
+    // "打印预约详情printDetails";
+    public void printDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Phone: " + phone);
+        System.out.println("Time: " + time);
+        doctor.printDetails();
+    }
+}
