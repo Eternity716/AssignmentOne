@@ -149,3 +149,24 @@ public class AssignmentOne {
         }
 
     }
+    // "Part5:取消预约cancelBooking";
+    public static void cancelBooking(String phone) {
+        boolean found = false; // 标记是否找到预约;
+        for (Appointment appointment : appointmentList) {
+            // 如果找到匹配的手机号
+            if (appointment.phone.equals(phone)) {
+                // 删除该预约remove;
+                appointmentList.remove(appointment);
+                System.out.println("cancel: " + phone);
+                found = true;
+                // 找到后结束循环break;
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("error: " + phone); // 如果没找到，输出错误信息error;
+        }
+
+    }
+}
