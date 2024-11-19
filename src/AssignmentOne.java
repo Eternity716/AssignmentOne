@@ -124,3 +124,28 @@ public class AssignmentOne {
         // "Part5:取消不存在的";
         cancelBooking("1212121212");
     }
+    // "Part5:创建预约createAppointment";
+    public static void createAppointment(String name, String phone, String time, HealthProfessional doctor) {
+        // "生成appointment";
+        Appointment appointment = new Appointment(name, phone, time, doctor);
+        // "添加到appointmentList";
+        appointmentList.add(appointment);
+        // "添加成功";
+        System.out.println("create appointment success!");
+    }
+
+    // "Part5:输出已预约列表printExistingAppointments";
+    public static void printExistingAppointments() {
+        // "判断预约列表是否为空";
+        if (appointmentList.size() == 0) {
+            System.out.println("please add appointment");
+
+        } else {
+            // "不是空的就打印预约列表appointmentList";
+            for (int i = 0; i < appointmentList.size(); i++) {
+                appointmentList.get(i).printDetails();
+                System.out.println("------------------------------");
+            }
+        }
+
+    }
