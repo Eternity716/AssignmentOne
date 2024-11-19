@@ -84,3 +84,16 @@ class Appointment {
         doctor.printDetails();
     }
 }
+// "AssignmentOne";
+public class AssignmentOne {
+    // "Part5:appointmentList存放Appointment";
+    static ArrayList<Appointment> appointmentList = new ArrayList<>();
+
+    // "运行主函数main";
+    public static void main(String[] args) {
+        // "Part3:创建三名GeneralPractitioner和两名Neurology";
+        GeneralPractitioner General1 = new GeneralPractitioner(1, "Charlie", "Pediatric care");
+        GeneralPractitioner General2 = new GeneralPractitioner(2, "Brown", "Mental health");
+        GeneralPractitioner General3 = new GeneralPractitioner(3, "John", "Geriatric care");
+        Neurology Neurology1 = new Neurology(1, "Alice Green", "Specialist in epilepsy and seizures management");
+        Neurology Neurology2 = new Neurology(2, "Bob White", "Expert in stroke rehabilitation and treatment");
